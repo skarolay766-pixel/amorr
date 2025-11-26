@@ -1,0 +1,93 @@
+/* Fondo con imagen, más pequeño y ligeramente borroso */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('foto.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.75);
+    z-index: -2;
+}
+
+/* Corazón flotando (opcional) */
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120px) scale(1.3); opacity: 0; }
+}
+
+.corazon {
+    position: fixed;
+    bottom: -20px;
+    left: calc(10% + 80% * var(--pos));
+    font-size: 25px;
+    color: #ff5e8e;
+    animation: float 4s linear infinite;
+    opacity: 0.7;
+}
+
+/* Contenedor principal con fondo oscuro suave */
+.contenido {
+    max-width: 700px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #ff8fb7;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* Botones interactivos */
+.botones button {
+    background: linear-gradient(135deg, #ff6fa8, #ff3d7a);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 80, 120, 0.6);
+}
+
+.botones button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255, 120, 160, 0.9);
+}
+
+/* Mensaje dinámico */
+#mensaje {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #ffd6e5;
+    min-height: 40px;
+}
+
+@keyframes mensajeFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

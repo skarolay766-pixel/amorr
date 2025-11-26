@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y & E - Nuestra Página</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Fondo -->
+    <div class="fondo"></div>
+
+    <!-- Contenido principal -->
+    <div class="contenido">
+        <h1>Y & E</h1>
+        
+        <p>
+            Desde el primer momento en que nuestras miradas se cruzaron, algo dentro de mí supo que tú eras
+            una parte importante de mi historia. No somos perfectos, pero juntos encontramos una forma
+            hermosa de amar, de crecer y de mejorar.
+        </p>
+        <p>
+            Eres paz en mis días complicados, eres sonrisa cuando el mundo pesa y eres fuerza cuando siento
+            que ya no puedo más. Contigo la vida se siente distinta… más suave, más cálida, más nuestra.
+        </p>
+        <p>
+            Gracias por estar, por quedarte y por hacerme sentir especial de una manera que nadie más ha
+            logrado. Esto es solo una pequeña parte de todo lo que siento por ti.
+        </p>
+
+       <div class="botones">
+    <button onclick="mostrarMensaje('❤️ Eres mi lugar favorito en el mundo, donde siempre quiero volver, porque contigo todo se siente mejor.')">❤️ Mensaje 1</button>
+    <button onclick="mostrarMensaje('💞 Me haces feliz de una forma que no sabía que existía, llenando mis días de alegría, risas y amor constante.')">💞 Mensaje 2</button>
+    <button onclick="mostrarMensaje('💗 Gracias por cada detalle, cada risa y cada momento a tu lado; contigo aprendí que el amor verdadero se siente en todo.')">💗 Mensaje 3</button>
+    </div>
+
+
+        <div id="mensaje-dinamico" class="mensaje"></div>
+    </div>
+
+    <script>
+        function mostrarMensaje(texto) {
+            const msg = document.getElementById('mensaje-dinamico');
+            msg.innerText = texto;
+            msg.classList.add('mostrar');
+            setTimeout(() => msg.classList.remove('mostrar'), 4000);
+        }
+    </script>
+
+</body>
+</html>
